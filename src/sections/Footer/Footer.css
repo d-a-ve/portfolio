@@ -1,0 +1,22 @@
+footer {
+  background: var(--primary600);
+  padding: 5rem 0 3rem;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.footer p {
+  font-size: var(--font-md);
+  color: var(--white);
+}
+
+body.dark footer {
+  background: transparent;
+}

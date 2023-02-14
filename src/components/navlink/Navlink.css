@@ -1,0 +1,40 @@
+.nav-link {
+  display: inline-block;
+  margin-right: 2rem;
+  list-style: none;
+}
+
+.nav-link:not(:last-of-type) a {
+  text-decoration: none;
+  color: var(--text);
+  font-size: var(--font-md);
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-link:not(:last-of-type) a::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: var(--secondary700);
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  transition: width 0.3s ease;
+}
+
+.nav-link:not(:last-of-type):hover a::after {
+  width: 50%;
+}
+
+body.dark .nav-link:not(:last-of-type):hover a {
+  color: var(--white);
+}
+
+body.dark .nav-link:not(:last-of-type):hover a::after {
+  width: 50%;
+}
+
+body.dark .nav-link:not(:last-of-type) a::after {
+  background: var(--secondary300);
+}

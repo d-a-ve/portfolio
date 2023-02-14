@@ -1,0 +1,14 @@
+.logo a {
+  text-decoration: none;
+}
+
+.logo span {
+  font-size: 4.4rem;
+  color: var(--primary700);
+  font-weight: 600;
+  font-family: "Tangerine", cursive;
+}
+
+body.dark .logo span {
+  color: var(--white);
+}

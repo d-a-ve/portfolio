@@ -1,0 +1,118 @@
+:root {
+  --primary100: #fefefe;
+  --primary200: #f2f2f6;
+  --primary300: #dadce7;
+  --primary400: #c3c5d7;
+  --primary500: #9fa3bf;
+  --primary600: #7c81a8;
+  --primary700: #363951;
+  --primary800: #262839;
+  --primary900: #171822;
+  --secondary900: #e7af05;
+  --secondary800: #fabd06;
+  --secondary700: #fac219;
+  --secondary600: #fbcc3f;
+  --secondary500: #fbd153;
+  --secondary400: #fcbd79;
+  --secondary300: #fde18c;
+  --secondary200: #fdebb3;
+  --secondary100: #fffaec;
+  --bg_1dp: #f9fafa;
+  --bg_2dp: #eef0f1;
+  --bg_3dp: #dadee1;
+  --white: #fff;
+
+  /* dark mode colours */
+  --Dbg: #121212;
+  --Dbg_1dp: #1f1f1f;
+  --Dbg_2dp: #242424;
+  --Dbg_3dp: #262626;
+  --Dtext_high: #dedede;
+  --Dtext_medium: #999999;
+  --Dtext_disabled: #616161;
+
+  /* used colours */
+  --heading: var(--primary700);
+  --text: var(--primary700);
+  --background: var(--white);
+  --background1: var(--bg_1dp);
+  --background2: var(--bg_2dp);
+  --background3: var(--bg_3dp);
+
+  /* font size */
+  font-size: 62.5%;
+  --font-xs: 1.4rem;
+  --font-base: 1.6rem;
+  --font-md: 1.8rem;
+  --font-lg: 2rem;
+  --font-xl: 2.5rem;
+  --font-2xl: 3.5rem;
+  --font-3xl: 4.5rem;
+  --font-4xl: 5.5rem;
+  --font-5xl: 6.5rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: var(--font-base);
+
+  /* global font color */
+  color: var(--text);
+}
+
+body.dark {
+  --heading: var(--Dtext_high);
+  --text: var(--Dtext_medium);
+  --background: var(--Dbg);
+  --background1: var(--Dbg_1dp);
+  --background2: var(--Dbg_2dp);
+  --background3: var(--Dbg_3dp);
+
+  background: var(--background);
+  color: var(--text);
+}
+
+.section {
+  width: 80%;
+  padding-block: 5rem;
+  margin: auto;
+}
+
+.grid {
+  display: grid;
+  row-gap: 2rem;
+}
+
+.icon-cursor {
+  cursor: pointer;
+}
+
+h2 {
+  font-size: var(--font-3xl);
+  line-height: 1;
+  color: var(--heading);
+  margin-bottom: 1.4rem;
+}
+
+@media all and (max-width: 568px) {
+  .section {
+    width: 90%;
+  }
+
+  .grid {
+    row-gap: 1.2rem;
+  }
+
+  h2 {
+    font-size: var(--font-2xl);
+  }
+}

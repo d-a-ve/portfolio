@@ -1,0 +1,32 @@
+.section-intro {
+  position: relative;
+}
+
+.section-intro p {
+  font-size: var(--font-base);
+  padding-left: 8rem;
+}
+
+.line {
+  height: 2px;
+  width: 7rem;
+  background: var(--secondary700);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+body.dark .line {
+  background: var(--secondary300);
+}
+
+@media all and (max-width: 568px) {
+  .section-intro p {
+    font-size: var(--font-xs);
+    padding-left: 6rem;
+  }
+
+  .line {
+    width: 5rem;
+  }
+}

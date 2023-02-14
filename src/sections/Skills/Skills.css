@@ -1,0 +1,23 @@
+.skills-data {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 1rem;
+  justify-content: space-between;
+}
+
+.skills-data-details {
+  flex-basis: 20%;
+  padding: 1rem;
+  text-align: center;
+}
+
+.skills-data-details p {
+  font-size: var(--font-lg);
+  margin-top: 1rem;
+}
+
+@media all and (max-width: 568px) {
+  .skills-data-details p {
+    font-size: var(--font-base);
+  }
+}
