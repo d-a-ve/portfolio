@@ -23,7 +23,9 @@ export default function Button({ link, linkText, email }: LinkPropsType) {
     <a
       href={email ? obsfucatedEmailHref : link}
       className="contact-btn"
-      onClick={directToEmail}
+      onClick={(e) => {
+        directToEmail(e, email);
+      }}
     >
       {linkText}
     </a>
