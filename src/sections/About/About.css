@@ -26,6 +26,7 @@
 .about-text-data p {
   font-size: var(--font-md);
   margin-bottom: 2.5rem;
+  text-align: justify;
 }
 
 .about-text-data p a {
