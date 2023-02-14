@@ -2,6 +2,7 @@ import React from "react";
 import Socials from "../../components/Socials";
 import { useMediaQuery } from "react-responsive";
 import SectionIntro from "../../utils/SectionIntro";
+import { directToEmail } from "../../utils/Button";
 import "./About.css";
 
 export default function About() {
@@ -44,8 +45,16 @@ export default function About() {
               </p>
 
               <p>
-                Ready to bring your ideas to life? <a href="#">Contact Me</a>.
-                You can also connect with me on social media here:
+                Ready to bring your ideas to life?{" "}
+                <a
+                  href="#"
+                  onClick={(e) => {
+                    directToEmail(e, true);
+                  }}
+                >
+                  Contact Me
+                </a>
+                . You can also connect with me on social media here:
               </p>
             </div>
 
