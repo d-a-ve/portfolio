@@ -19,7 +19,7 @@ export default function ProjectCard({
     <div className="project-card">
       <div className="project-card-img">
         <img
-          src={`../../public/assets/${projectCover}-cover-image.png`}
+          src={`../../assets/${projectCover}-cover-image.png`}
           alt={`${projectTitle} Image`}
         />
       </div>
@@ -34,8 +34,12 @@ export default function ProjectCard({
         </div>
 
         <div className="project-link">
-          <a href={link}>Live Link</a>
-          <a href={githubRepo}>Github Repo</a>
+          <a href={link} target="_blank">
+            Live Link
+          </a>
+          <a href={githubRepo} target="_blank">
+            Github Repo
+          </a>
         </div>
       </div>
     </div>
