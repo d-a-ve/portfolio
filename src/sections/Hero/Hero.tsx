@@ -1,10 +1,12 @@
 import React from "react";
+import { useMediaQuery } from "react-responsive";
 import Button from "../../utils/Button";
 import SectionIntro from "../../utils/SectionIntro";
 import "./Hero.css";
 
 export default function Hero() {
-  return (
+	const isMd = useMediaQuery({ query: "(max-width: 768px)" }); // 768px
+	return (
 		<section className="hero" id="home">
 			<div className="hero-text">
 				<div className="hero-text-details">
