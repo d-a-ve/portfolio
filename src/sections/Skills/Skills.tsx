@@ -15,7 +15,7 @@ export default function Skills() {
         <SectionIntro>What I use to craft</SectionIntro>
 
         <div>
-          <h2>My Skills</h2>
+          <h2>Technologies</h2>
           <div className="skills-data">{skillList}</div>
         </div>
       </div>

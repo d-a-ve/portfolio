@@ -7,7 +7,7 @@ import { projects } from "../../../myData";
 
 export default function Projects() {
   const [projectAge, setProjectAge] = useState({
-    value: "oldest",
+    value: "newest",
   });
 
   const projectsData = [...projects];
@@ -15,9 +15,9 @@ export default function Projects() {
   const projectDisplay =
     projectAge.value === "oldest" ? projectsData : projectsData.reverse();
 
-  const allProjects = projectDisplay.map((project) => (
+  const allProjects = projectDisplay.map((project, i) => (
     <ProjectCard
-      key={project.id}
+      key={i}
       projectTitle={project.title}
       description={project.description}
       link={project.link}
@@ -45,8 +45,8 @@ export default function Projects() {
               value={projectAge.value}
               onChange={handleChange}
             >
-              <option value="oldest">Oldest to Newest</option>
               <option value="newest">Newest to Oldest</option>
+              <option value="oldest">Oldest to Newest</option>
             </select>
           </form>
 

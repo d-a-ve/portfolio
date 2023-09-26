@@ -1,85 +1,100 @@
 .hero {
-  display: flex;
-  width: 80%;
-  margin: 5rem auto;
-  align-items: center;
-  justify-content: space-between;
+	display: flex;
+	width: 80%;
+	margin: 5rem auto;
+	align-items: center;
+	justify-content: space-between;
 }
 
 .hero-text {
-  flex-basis: 48%;
+	flex-basis: 48%;
 }
 
 .hero-text-details {
-  display: grid;
-  row-gap: 1rem;
+	display: grid;
+	row-gap: 1rem;
 }
 
 .main-hero-text {
-  margin-top: 1rem;
+	margin-top: 1rem;
 }
 
 .hero-message {
-  margin-bottom: 4rem;
+	margin-bottom: 4rem;
+  max-width: 100%;
 }
 
 .hero-message h1 {
-  width: 9ch;
-  font-size: var(--font-5xl);
-  line-height: 1;
-  color: var(--heading);
-  margin-bottom: 1rem;
+	width: min(9ch, 100%);
+	font-size: var(--font-5xl);
+	line-height: 1;
+	color: var(--heading);
+	margin-bottom: 1rem;
 }
 
 .hero-message p {
-  font-size: var(--font-md);
+	font-size: var(--font-md);
 }
 
 .hero-img {
-  flex-basis: 40%;
-  margin-right: 5%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+	flex-basis: 40%;
+	margin-right: 5%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .hero-svg {
-  width: 350px;
-  fill: var(--primary600);
+	width: 350px;
+	fill: var(--primary600);
 }
 
 body.dark .hero-svg {
-  fill: var(--primary400);
+	fill: var(--primary400);
 }
 
 .hero-svg-img {
-  width: 80px;
+	width: 80px;
 }
 
 @media all and (max-width: 768px) {
-  .hero-message h1 {
-    font-size: var(--font-4xl);
-  }
+	.hero-message h1 {
+		font-size: var(--font-4xl);
+	}
 }
 
 @media all and (max-width: 568px) {
-  .hero {
-    width: 90%;
-    flex-direction: column;
-    gap: 2rem;
-  }
+	.hero {
+		width: 90%;
+		flex-direction: column;
+		gap: 2rem;
+	}
 
-  .hero-text-details {
-    width: 70%;
-  }
+	.hero-text-details {
+		width: 70%;
+	}
 
-  .hero-message h1 {
-    font-size: var(--font-3xl);
-  }
+	.hero-message h1 {
+		font-size: var(--font-3xl);
+	}
 }
 
 @media all and (min-width: 1400px) {
-  .hero-svg {
-    width: 500px;
-  }
+	.hero-svg {
+		width: 500px;
+	}
+}
+
+@media all and (max-width: 840px) {
+	.hero {
+		-ms-flex-direction: column-reverse;
+		flex-direction: column-reverse;
+		align-items: flex-start;
+	}
+}
+
+@media all and (max-width: 370px) {
+	.hero-svg {
+		width: 200px;
+	}
 }
