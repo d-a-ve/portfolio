@@ -21,6 +21,7 @@ export default function ProjectCard({
         <img
           src={`../../assets/${projectCover}-cover-image.png`}
           alt={`${projectTitle} Image`}
+          loading="lazy"
         />
       </div>
       <div className="project-data">
