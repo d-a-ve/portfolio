@@ -77,4 +77,13 @@ export const projects = [
 		projectCover: "pixeldrag",
 		technologiesUsed: "React, Typescript, TailwindCSS",
 	},
+	{
+		title: "Memora",
+		description:
+			"Memora helps you keep track of birthdays of your loved ones, sending you timely reminders to make their day special.",
+		link: "https://memora-tau.vercel.app/",
+		githubRepoLink: "https://github.com/d-a-ve/memora",
+		projectCover: "memora",
+		technologiesUsed: "React, Typescript, TailwindCSS, Appwrite, Tanstack query",
+	},
 ];

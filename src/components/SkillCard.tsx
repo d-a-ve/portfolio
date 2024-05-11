@@ -1,5 +1,4 @@
-import React from "react";
-import { FaHtml5, FaCss3, FaReact, FaJs } from "react-icons/fa";
+import { FaCss3, FaHtml5, FaJs, FaReact } from "react-icons/fa";
 import { SiFirebase, SiTailwindcss, SiTypescript } from "react-icons/si";
 import { useMediaQuery } from "react-responsive";
 
