@@ -122,13 +122,13 @@ body.dark .project-link a::after {
   background: var(--primary100);
 }
 
-@media all and (max-width: 768px) {
+@media all and (max-width: 900px) {
   .projects-details {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media all and (max-width: 568px) {
+@media all and (max-width: 640px) {
   .projects-details {
     grid-template-columns: 100%;
   }
