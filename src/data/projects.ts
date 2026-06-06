@@ -1,8 +1,3 @@
-export type ProjectMetric = {
-  label: string;
-  value: string;
-};
-
 export type ProjectEntry = {
   title: string;
   description: string;
@@ -10,7 +5,6 @@ export type ProjectEntry = {
   githubRepoLink?: string;
   projectCover: string;
   technologiesUsed: string;
-  metrics: ProjectMetric[];
 };
 
 export const projects: ProjectEntry[] = [
@@ -22,10 +16,6 @@ export const projects: ProjectEntry[] = [
     githubRepoLink: "https://github.com/d-a-ve/memora",
     projectCover: "memora",
     technologiesUsed: "React, Typescript, TailwindCSS, Appwrite, Tanstack query",
-    metrics: [
-      { label: "Outcome", value: "More dependable reminders" },
-      { label: "Stack", value: "React / TypeScript / Appwrite" },
-    ],
   },
   {
     title: "Petshub",
