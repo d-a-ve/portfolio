@@ -32,7 +32,7 @@ export const projects: ProjectEntry[] = [
     description:
       "An e-commerce website for users to find their perfect furry friend.",
     link: "https://petshubng.com/",
-    githubRepoLink: null,
+    githubRepoLink: undefined,
     projectCover: "petshub",
     technologiesUsed: "Next.js, React, Typescript, TailwindCSS, Redux, RTK query, Tanstack query",
   },
@@ -41,7 +41,7 @@ export const projects: ProjectEntry[] = [
     description:
       "A course platform for users to learn new tech skills and get certified.",
     link: "https://courses.zkyte.com/",
-    githubRepoLink: null,
+    githubRepoLink: undefined,
     projectCover: "zkyte-courses",
     technologiesUsed: "Next.js, React, Typescript, TailwindCSS, Zustand, Tanstack Query",
   },
@@ -50,7 +50,7 @@ export const projects: ProjectEntry[] = [
     description:
       "A website for Zkyte Ltd, a software development company.",
     link: "https://zkyte.com/",
-    githubRepoLink: null,
+    githubRepoLink: undefined,
     projectCover: "zkyte-ltd",
     technologiesUsed: "Next.js, TailwindCSS, TypeScript",
   },
@@ -59,7 +59,7 @@ export const projects: ProjectEntry[] = [
     description:
       "A SaaS product to help farmers manage their livestock & farm.",
     link: "https://rairer.com/",
-    githubRepoLink: null,
+    githubRepoLink: undefined,
     projectCover: "rairer",
     technologiesUsed: "Next.js, React, Typescript, TailwindCSS, Zustand, Tanstack query",
   },
