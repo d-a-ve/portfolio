@@ -16,8 +16,9 @@ export default function Hero() {
 
       <div className="hero-foot">
         <p className="hero-summary reveal reveal-delay-3">
-          I design and build high-contrast React and TypeScript interfaces with
-          strong hierarchy, deliberate motion, and a careful eye for detail.
+          I build complete web applications from frontend to backend, leading
+          teams and shaping reliable systems with React, TypeScript, Node.js,
+          and clean product thinking.
         </p>
 
         <div className="hero-meta reveal reveal-delay-4">

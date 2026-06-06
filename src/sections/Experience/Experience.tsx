@@ -20,8 +20,7 @@ export default function Experience() {
           <h2 className="reveal">Experience</h2>
 
           <p className="experience-lead reveal reveal-delay-1">
-            A short timeline of the habits, project work, and design choices
-            that shape how I build modern interfaces.
+            The experience that shapes how I deliver reliable products.
           </p>
         </div>
 

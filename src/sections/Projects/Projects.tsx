@@ -26,8 +26,9 @@ export default function Projects() {
           <h2 className="projects-title reveal">Projects</h2>
 
           <p className="projects-aside reveal reveal-delay-1">
-            A curated set of interfaces and experiments that emphasize strong
-            hierarchy, image-led storytelling, and practical React patterns.
+            A curated set of products and experiments that show how I turn
+            complex requirements into smooth, reliable, user-friendly web
+            applications across frontend and backend.
           </p>
         </div>
 

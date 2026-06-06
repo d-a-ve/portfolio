@@ -17,8 +17,9 @@ export default function Skills() {
         <div className="skills-hero">
           <h2 className="reveal">Skills</h2>
           <p className="reveal reveal-delay-1">
-            The stack I reach for when a project needs structure, speed, and a
-            polished visual finish.
+            The stack I reach for when I need to ship complete web applications,
+            connect frontends to backend services, and keep the product fast,
+            maintainable, and easy to scale.
           </p>
         </div>
 

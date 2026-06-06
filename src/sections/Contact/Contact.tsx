@@ -21,8 +21,9 @@ export default function Contact() {
 
         <div className="contact-grid">
           <p className="contact-copy reveal reveal-delay-1">
-            If you need a landing page, product interface, or a thoughtful
-            front-end partnership, I&apos;d love to hear about it.
+            If you need someone who can turn a complex product idea into a
+            smooth web application, lead a small team, or handle both frontend
+            and backend delivery, I&apos;d love to hear about it.
           </p>
 
           <div className="contact-side reveal reveal-delay-2">

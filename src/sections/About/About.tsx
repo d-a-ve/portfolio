@@ -14,8 +14,8 @@ export default function About() {
 
           <div className="about-quote">
             <p>
-              I like design systems that make the right thing easy and the final
-              result feel like a crafted object.
+              I care about turning systems into smooth, reliable,
+              scalable products that still feel simple for people to use.
             </p>
           </div>
         </div>
@@ -25,16 +25,17 @@ export default function About() {
           <h2 className="reveal reveal-delay-1">About</h2>
 
           <p className="about-lead reveal reveal-delay-2">
-            I’m a software engineer based in Nigeria. I focus on clear,
-            responsive interfaces that feel calm, editorial, and easy to use.
+            I’m a software engineer based in Nigeria. I build and lead teams to
+            deliver complete web applications that feel polished from the first
+            interaction to the last deployment.
           </p>
 
           <p className="about-body reveal reveal-delay-3">
-            I enjoy taking a rough idea, shaping the hierarchy, and turning it
-            into something that feels deliberate from the first fold to the last
-            footer. The work I enjoy most sits at the intersection of strong
-            visual rhythm, reusable React structure, and a polished user
-            experience.
+            Recently, I led a team of four to create an AI backend generator
+            with chat, in-browser code editing, Git tracking, database and
+            environment management, live logs, and subscription payments. I like
+            moving between frontend, backend, and product decisions until the
+            whole system feels like one smooth experience.
           </p>
 
           <dl className="about-details reveal reveal-delay-4">
