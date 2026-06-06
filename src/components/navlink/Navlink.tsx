@@ -9,8 +9,6 @@ export type LinkPropsType = {
 };
 
 export default function Navlink({ link, linkText, click }: LinkPropsType) {
-  function removeNav() {}
-
   return (
     <li className="nav-link">
       <a href={`#${link}`} onClick={click}>

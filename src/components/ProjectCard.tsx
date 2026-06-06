@@ -1,10 +1,11 @@
 type ProjectCardPropsType = {
+  index: number;
   projectTitle: string;
   description: string;
   link: string;
   projectCover: string;
   technologies: string;
-  githubRepo: string;
+  githubRepo?: string;
 };
 
 export default function ProjectCard({
@@ -15,34 +16,65 @@ export default function ProjectCard({
   technologies,
   githubRepo,
 }: ProjectCardPropsType) {
+  const stack = technologies
+    .split(",")
+    .map((item) => item.trim())
+    .filter(Boolean);
+
   return (
-    <div className="project-card">
+    <article className="project-card">
       <div className="project-card-img">
         <img
-          src={`../../assets/${projectCover}-cover-image.png`}
+          src={`/assets/${projectCover}-cover-image.png`}
           alt={`${projectTitle} Image`}
           loading="lazy"
+          decoding="async"
         />
       </div>
       <div className="project-data">
         <div className="project-heading">
           <h3>{projectTitle}</h3>
-          <p>{technologies}</p>
         </div>
 
         <div className="project-description">
           <p>{description}</p>
         </div>
 
-        <div className="project-link">
-          <a href={link} target="_blank">
-            Live Link
+        <div className="project-actions">
+          <ul className="project-stack" aria-label="Tech stack">
+            {stack.map((tech) => (
+              <li key={`${projectTitle}-${tech}`}>{tech}</li>
+            ))}
+          </ul>
+
+          <div className="project-link">
+          <a
+            className="project-link--primary"
+            href={link}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span>Visit live</span>
+            <span className="project-link__arrow" aria-hidden="true">
+              &#8599;
+            </span>
           </a>
-          <a href={githubRepo} target="_blank">
-            Github Repo
-          </a>
+          {githubRepo ? (
+            <a
+              className="project-link--secondary"
+              href={githubRepo}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span>Source</span>
+              <span className="project-link__arrow" aria-hidden="true">
+                &#8599;
+              </span>
+            </a>
+          ) : null}
+          </div>
         </div>
       </div>
-    </div>
+    </article>
   );
 }

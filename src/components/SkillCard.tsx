@@ -1,5 +1,11 @@
-import { FaCss3, FaHtml5, FaJs, FaReact } from "react-icons/fa";
-import { SiFirebase, SiTailwindcss, SiTypescript } from "react-icons/si";
+import {
+  FaAccessibleIcon,
+  FaCss3,
+  FaGitAlt,
+  FaLayerGroup,
+  FaReact,
+} from "react-icons/fa";
+import { SiFirebase, SiFramer, SiTypescript, SiVite } from "react-icons/si";
 import { useMediaQuery } from "react-responsive";
 
 type SkillCardPropType = {
@@ -18,26 +24,32 @@ export default function SkillCard({
 	let icon;
 
 	switch (skillText.toLocaleLowerCase()) {
-		case "html":
-			icon = <FaHtml5 size={mediaSize} />;
-			break;
-		case "css":
-			icon = <FaCss3 size={mediaSize} />;
-			break;
-		case "javascript":
-			icon = <FaJs size={mediaSize} />;
-			break;
 		case "react":
 			icon = <FaReact size={mediaSize} />;
-			break;
-		case "tailwindcss":
-			icon = <SiTailwindcss size={mediaSize} />;
 			break;
 		case "typescript":
 			icon = <SiTypescript size={mediaSize} />;
 			break;
+		case "css":
+			icon = <FaCss3 size={mediaSize} />;
+			break;
+		case "design systems":
+			icon = <FaLayerGroup size={mediaSize} />;
+			break;
+		case "accessibility":
+			icon = <FaAccessibleIcon size={mediaSize} />;
+			break;
+		case "framer motion":
+			icon = <SiFramer size={mediaSize} />;
+			break;
+		case "vite":
+			icon = <SiVite size={mediaSize} />;
+			break;
 		case "firebase":
 			icon = <SiFirebase size={mediaSize} />;
+			break;
+		case "git":
+			icon = <FaGitAlt size={mediaSize} />;
 			break;
 		default:
 			icon = null;
@@ -45,8 +57,9 @@ export default function SkillCard({
 
 	return (
 		<div className="skills-data-details">
-			{/* when icon has a value display it */}
-			{icon !== null && icon}
+			<div className="skills-icon" aria-hidden="true">
+				{icon !== null && icon}
+			</div>
 			<p>{skillText}</p>
 		</div>
 	);

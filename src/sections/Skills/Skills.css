@@ -1,23 +1,106 @@
+.skills-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(2rem, 5vw, 5rem);
+  align-items: end;
+  margin-bottom: clamp(2.4rem, 5vw, 4rem);
+}
+
+.skills-hero h2 {
+  font-size: var(--font-4xl);
+  font-weight: 900;
+  line-height: 0.82;
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
+}
+
+.skills-hero p {
+  max-width: 50ch;
+  font-size: clamp(1.6rem, 1.9vw, 1.9rem);
+  line-height: 1.62;
+}
+
+.skills-scroll {
+  width: 100%;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.skills-scroll::-webkit-scrollbar {
+  display: none;
+}
+
 .skills-data {
-  display: flex;
-  flex-wrap: wrap;
-  row-gap: 1rem;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0;
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
 }
 
 .skills-data-details {
-  flex-basis: 20%;
-  padding: 1rem;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+  padding: 2.4rem 2rem;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: transparent;
+}
+
+.skills-icon {
+  display: inline-grid;
+  place-items: center;
+  width: 4.4rem;
+  height: 4.4rem;
+  flex: 0 0 auto;
+  border-radius: 999px;
+  border: 1px solid var(--line-strong);
+  color: var(--text);
 }
 
 .skills-data-details p {
-  font-size: var(--font-lg);
-  margin-top: 1rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 1.8vw, 1.9rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  color: var(--text);
 }
 
-@media all and (max-width: 568px) {
-  .skills-data-details p {
-    font-size: var(--font-base);
+@media (max-width: 900px) {
+  .skills-hero {
+    grid-template-columns: 1fr;
+    align-items: start;
+    gap: 2rem;
+  }
+
+  .skills-data {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .skills-scroll {
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 0.4rem;
+  }
+
+  .skills-data {
+    display: grid;
+    grid-template-rows: repeat(4, auto);
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(17rem, 42vw);
+    width: max-content;
+    min-width: 100%;
+    border-left: 1px solid var(--line);
+  }
+
+  .skills-data-details {
+    min-height: 11rem;
+    min-width: 17rem;
+    border-left: 0;
   }
 }

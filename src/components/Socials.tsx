@@ -4,10 +4,10 @@ import { FaGithub, FaTwitter, FaLinkedin } from "react-icons/fa";
 export default function Socials() {
   return (
     <div className="socials">
-      <a href="https://github.com/d-a-ve/" target="_blank">
+      <a href="https://github.com/d-a-ve/" target="_blank" rel="noreferrer noopener">
         <FaGithub />
       </a>
-      <a href="https://twitter.com/kvng__dave" target="_blank">
+      <a href="https://twitter.com/kvng__dave" target="_blank" rel="noreferrer noopener">
         <FaTwitter />
       </a>
       {/* <a href="#">

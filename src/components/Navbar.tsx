@@ -1,36 +1,44 @@
-import React from "react";
 import Navlink from "./navlink/Navlink";
-import Button from "../utils/Button";
 import { AiOutlineClose } from "react-icons/ai";
-import { useMediaQuery } from "react-responsive";
 import "./Navbar.css";
 
 type NavbarPropsType = {
   closeNav: () => void;
   toggleNav: boolean;
+  variant?: "inline" | "overlay";
 };
 
-export default function Navbar({ closeNav, toggleNav }: NavbarPropsType) {
-  const isMd = useMediaQuery({ query: "(max-width: 768px)" }); // 768px
+export default function Navbar({
+  closeNav,
+  toggleNav,
+  variant = "inline",
+}: NavbarPropsType) {
+  const isOverlay = variant === "overlay";
 
   return (
     <nav
-      style={{
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        left: toggleNav ? "0" : "-100%",
-        marginLeft: !isMd ? "auto" : "",
-      }}
+      className={`site-nav ${isOverlay ? "site-nav--overlay" : ""} ${
+        toggleNav ? "is-open" : ""
+      }`}
+      aria-hidden={isOverlay && !toggleNav}
     >
-      {isMd && <AiOutlineClose className="nav--close-btn" onClick={closeNav} />}
+      {isOverlay ? (
+        <button
+          type="button"
+          className="nav-close-btn"
+          onClick={closeNav}
+          aria-label="Close navigation menu"
+        >
+          <AiOutlineClose size={18} />
+        </button>
+      ) : null}
       <ul className="nav-links">
         <Navlink link="home" linkText="Home" click={closeNav} />
-        <Navlink link="about" linkText="About Me" click={closeNav} />
+        <Navlink link="about" linkText="About" click={closeNav} />
+        <Navlink link="skills" linkText="Skills" click={closeNav} />
         <Navlink link="projects" linkText="Projects" click={closeNav} />
-        <li className="nav-link">
-          <Button email={true} link="#" linkText="Contact Me" />
-        </li>
+        <Navlink link="experience" linkText="Experience" click={closeNav} />
+        <Navlink link="contact" linkText="Contact" click={closeNav} />
       </ul>
     </nav>
   );

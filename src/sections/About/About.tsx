@@ -1,54 +1,55 @@
-import React from "react";
-import Socials from "../../components/Socials";
-import { useMediaQuery } from "react-responsive";
 import SectionIntro from "../../utils/SectionIntro";
-import { directToEmail } from "../../utils/Button";
+import Socials from "../../components/Socials";
+import Button from "../../utils/Button";
 import "./About.css";
 
 export default function About() {
-  const isMd = useMediaQuery({ query: "(max-width: 768px)" }); // 768px
-
   return (
-		<section className="section about" id="about">
-			<div className="about-me">
-				{!isMd && (
-					<div className="about-img">
-						<img src="../../assets/dave01.jpg" alt="David Aronmwan" />
-					</div>
-				)}
+    <section className="section about" id="about">
+      <div className="about-grid">
+        <div className="about-visual reveal">
+          <div className="about-image">
+            <img src="/assets/dave01.jpg" alt="David Aronmwan" loading="lazy" />
+          </div>
 
-				<div className="about-text">
-					<div className="about-text-details grid">
-						<SectionIntro>What to know about Me</SectionIntro>
+          <div className="about-quote">
+            <p>
+              I like design systems that make the right thing easy and the final
+              result feel like a crafted object.
+            </p>
+          </div>
+        </div>
 
-						<div className="about-text-data">
-							<h2>About me</h2>
-							<p>
-								I'm a budding React Frontend developer based in Lagos, Nigeria.
-								As a junior developer, I'm passionate about solving problems and
-								crafting visually engaging and user-friendly web solutions with
-								React and Typescript. I'm committed to continuous learning,
-								always striving to improve my skills and create captivating
-								digital experiences.
-							</p>
+        <div className="about-copy">
+          <SectionIntro num="01">What to know about me</SectionIntro>
+          <h2 className="reveal reveal-delay-1">About</h2>
 
-							<p>
-								Let's collaborate and bring your web ideas to life.{" "}
-								<a
-									href="#"
-									onClick={(e) => {
-										directToEmail(e, true);
-									}}>
-									Contact Me
-								</a>
-								. You can also connect with me on social media here:
-							</p>
-						</div>
+          <p className="about-lead reveal reveal-delay-2">
+            I’m a software engineer based in Nigeria. I focus on clear,
+            responsive interfaces that feel calm, editorial, and easy to use.
+          </p>
 
-						<Socials />
-					</div>
-				</div>
-			</div>
-		</section>
-	);
+          <p className="about-body reveal reveal-delay-3">
+            I enjoy taking a rough idea, shaping the hierarchy, and turning it
+            into something that feels deliberate from the first fold to the last
+            footer. The work I enjoy most sits at the intersection of strong
+            visual rhythm, reusable React structure, and a polished user
+            experience.
+          </p>
+
+          <dl className="about-details reveal reveal-delay-4">
+            <div>
+              <dt>Location</dt>
+              <dd>Nigeria</dd>
+            </div>
+          </dl>
+
+          <div className="about-actions reveal reveal-delay-4">
+            <Button email={true} link="#" linkText="Email me" />
+            <Socials />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 }

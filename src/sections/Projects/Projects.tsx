@@ -1,23 +1,13 @@
-import { useState } from "react";
 import SectionIntro from "../../utils/SectionIntro";
 import ProjectCard from "../../components/ProjectCard";
-import Button from "../../utils/Button";
 import "./Projects.css";
-import { projects } from "../../../myData";
+import { projects } from "../../data/projects";
 
 export default function Projects() {
-  const [projectAge, setProjectAge] = useState({
-    value: "newest",
-  });
-
-  const projectsData = [...projects];
-
-  const projectDisplay =
-    projectAge.value === "oldest" ? projectsData : projectsData.reverse();
-
-  const allProjects = projectDisplay.map((project, i) => (
+  const allProjects = projects.map((project, index) => (
     <ProjectCard
-      key={i}
+      key={project.title}
+      index={index}
       projectTitle={project.title}
       description={project.description}
       link={project.link}
@@ -27,35 +17,21 @@ export default function Projects() {
     />
   ));
 
-  function handleChange(e: React.ChangeEvent<HTMLSelectElement>) {
-    setProjectAge((prevAge) => ({ ...prevAge, value: e.target.value }));
-  }
-
   return (
     <section className="section projects" id="projects">
       <div className="projects-container grid">
-        <SectionIntro>What I have built</SectionIntro>
+        <SectionIntro num="03">Selected projects</SectionIntro>
 
-        <div>
-          <h2>My Projects</h2>
+        <div className="projects-hero">
+          <h2 className="projects-title reveal">Projects</h2>
 
-          <form>
-            <select
-              className="projects-age-select"
-              value={projectAge.value}
-              onChange={handleChange}
-            >
-              <option value="newest">Newest to Oldest</option>
-              <option value="oldest">Oldest to Newest</option>
-            </select>
-          </form>
-
-          <div className="projects-details">{allProjects}</div>
+          <p className="projects-aside reveal reveal-delay-1">
+            A curated set of interfaces and experiments that emphasize strong
+            hierarchy, image-led storytelling, and practical React patterns.
+          </p>
         </div>
 
-        <div style={{ display: "flex", justifyContent: "center" }}>
-          <Button email={true} link="#" linkText="Contact Me" />
-        </div>
+        <div className="projects-details">{allProjects}</div>
       </div>
     </section>
   );
