@@ -1,3 +1,4 @@
+import Button, { RESUME_URL } from "../../utils/Button";
 import "./Hero.css";
 
 export default function Hero() {
@@ -29,12 +30,21 @@ export default function Hero() {
             </div>
           </dl>
 
-          <a className="hero-cta" href="#projects">
-            <span>View selected work</span>
-            <span className="hero-cta__arrow" aria-hidden="true">
-              &#8599;
-            </span>
-          </a>
+          <div className="hero-actions">
+            <Button
+              link={RESUME_URL}
+              linkText="Resume"
+              newTab
+              variant="primary"
+            />
+
+            <a className="hero-cta hero-cta--secondary" href="#projects">
+              <span>View selected work</span>
+              <span className="hero-cta__arrow" aria-hidden="true">
+                &#8599;
+              </span>
+            </a>
+          </div>
         </div>
       </div>
     </section>

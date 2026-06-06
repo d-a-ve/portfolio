@@ -1,6 +1,7 @@
 import React from "react";
 import Logo from "../../components/logo/Logo";
 import Navbar from "../../components/Navbar";
+import Button, { RESUME_URL } from "../../utils/Button";
 import { useMediaQuery } from "react-responsive";
 import { IconContext } from "react-icons";
 import { AiOutlineMenu } from "react-icons/ai";
@@ -52,6 +53,15 @@ export default function Header() {
           <Logo />
           {!isMd ? (
             <Navbar toggleNav={toggleNav} closeNav={closeNav} variant="inline" />
+          ) : null}
+          {!isMd ? (
+            <Button
+              link={RESUME_URL}
+              linkText="Resume"
+              newTab
+              variant="primary"
+              className="contact-btn--compact"
+            />
           ) : null}
           {isMd ? (
             <IconContext.Provider value={{ className: "icon-cursor" }}>

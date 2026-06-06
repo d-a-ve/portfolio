@@ -68,6 +68,13 @@
   gap: 2.4rem;
 }
 
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+
 .hero-points {
   display: flex;
   flex-wrap: wrap;
@@ -123,6 +130,17 @@
   transform: translate(3px, -3px);
 }
 
+.hero-cta--secondary {
+  border: 1px solid var(--line-strong);
+  background: transparent;
+  color: var(--text);
+}
+
+.hero-cta--secondary:hover {
+  background: transparent;
+  border-color: var(--accent);
+}
+
 @media (max-width: 900px) {
   .hero-foot {
     grid-template-columns: 1fr;
@@ -157,6 +175,15 @@
 
   .hero-meta {
     width: 100%;
+  }
+
+  .hero-actions {
+    width: 100%;
+    justify-content: stretch;
+  }
+
+  .hero-actions > * {
+    flex: 1 1 0;
   }
 
   .hero-cta {

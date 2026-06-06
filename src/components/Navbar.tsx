@@ -1,4 +1,5 @@
 import Navlink from "./navlink/Navlink";
+import Button, { RESUME_URL } from "../utils/Button";
 import { AiOutlineClose } from "react-icons/ai";
 import "./Navbar.css";
 
@@ -40,6 +41,19 @@ export default function Navbar({
         <Navlink link="experience" linkText="Experience" click={closeNav} />
         <Navlink link="contact" linkText="Contact" click={closeNav} />
       </ul>
+
+      {isOverlay ? (
+        <div className="nav-resume">
+          <Button
+            link={RESUME_URL}
+            linkText="Resume"
+            newTab
+            variant="primary"
+            fullWidth
+            onClick={closeNav}
+          />
+        </div>
+      ) : null}
     </nav>
   );
 }
