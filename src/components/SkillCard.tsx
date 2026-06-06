@@ -1,11 +1,26 @@
 import {
-  FaAccessibleIcon,
-  FaCss3,
+  FaCode,
   FaGitAlt,
   FaLayerGroup,
   FaReact,
 } from "react-icons/fa";
-import { SiFirebase, SiFramer, SiTypescript, SiVite } from "react-icons/si";
+import {
+  SiAppwrite,
+  SiDocker,
+  SiExpress,
+  SiFirebase,
+  SiGithub,
+  SiJavascript,
+  SiMongodb,
+  SiNodedotjs,
+  SiNextdotjs,
+  SiPostgresql,
+  SiPostman,
+  SiReactquery,
+  SiRedis,
+  SiTailwindcss,
+  SiTypescript,
+} from "react-icons/si";
 import { useMediaQuery } from "react-responsive";
 
 type SkillCardPropType = {
@@ -24,35 +39,70 @@ export default function SkillCard({
 	let icon;
 
 	switch (skillText.toLocaleLowerCase()) {
+		case "javascript":
+			icon = <SiJavascript size={mediaSize} />;
+			break;
+		case "node.js":
+		case "nodejs":
+			icon = <SiNodedotjs size={mediaSize} />;
+			break;
+		case "express.js":
+		case "expressjs":
+			icon = <SiExpress size={mediaSize} />;
+			break;
 		case "react":
+		case "react.js":
+		case "reactjs":
 			icon = <FaReact size={mediaSize} />;
 			break;
 		case "typescript":
 			icon = <SiTypescript size={mediaSize} />;
 			break;
-		case "css":
-			icon = <FaCss3 size={mediaSize} />;
+		case "next.js":
+		case "nextjs":
+			icon = <SiNextdotjs size={mediaSize} />;
 			break;
-		case "design systems":
-			icon = <FaLayerGroup size={mediaSize} />;
+		case "tailwind css":
+			icon = <SiTailwindcss size={mediaSize} />;
 			break;
-		case "accessibility":
-			icon = <FaAccessibleIcon size={mediaSize} />;
+		case "axios":
+			icon = <FaCode size={mediaSize} />;
 			break;
-		case "framer motion":
-			icon = <SiFramer size={mediaSize} />;
+		case "postman":
+			icon = <SiPostman size={mediaSize} />;
 			break;
-		case "vite":
-			icon = <SiVite size={mediaSize} />;
+		case "appwrite":
+			icon = <SiAppwrite size={mediaSize} />;
 			break;
 		case "firebase":
 			icon = <SiFirebase size={mediaSize} />;
 			break;
+		case "react query":
+			icon = <SiReactquery size={mediaSize} />;
+			break;
 		case "git":
 			icon = <FaGitAlt size={mediaSize} />;
 			break;
+		case "github":
+			icon = <SiGithub size={mediaSize} />;
+			break;
+		case "nosql":
+			icon = <FaLayerGroup size={mediaSize} />;
+			break;
+		case "mongodb":
+			icon = <SiMongodb size={mediaSize} />;
+			break;
+		case "postgresql":
+			icon = <SiPostgresql size={mediaSize} />;
+			break;
+		case "redis":
+			icon = <SiRedis size={mediaSize} />;
+			break;
+		case "docker":
+			icon = <SiDocker size={mediaSize} />;
+			break;
 		default:
-			icon = null;
+			icon = <FaCode size={mediaSize} />;
 	}
 
 	return (

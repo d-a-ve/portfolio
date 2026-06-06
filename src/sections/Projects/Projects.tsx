@@ -4,7 +4,8 @@ import "./Projects.css";
 import { projects } from "../../data/projects";
 
 export default function Projects() {
-  const allProjects = projects.map((project, index) => (
+  const reversedProjects = [...projects].reverse();
+  const allProjects = reversedProjects.map((project, index) => (
     <ProjectCard
       key={project.title}
       index={index}
@@ -25,11 +26,11 @@ export default function Projects() {
         <div className="projects-hero">
           <h2 className="projects-title reveal">Projects</h2>
 
-          <p className="projects-aside reveal reveal-delay-1">
+          {/* <p className="projects-aside reveal reveal-delay-1">
             A curated set of products and experiments that show how I turn
             complex requirements into smooth, reliable, user-friendly web
             applications across frontend and backend.
-          </p>
+          </p> */}
         </div>
 
         <div className="projects-details">{allProjects}</div>

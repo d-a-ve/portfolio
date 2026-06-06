@@ -5,7 +5,7 @@ import { experience } from "../../data/experience";
 import "./Experience.css";
 
 export default function Experience() {
-  const [openIndex, setOpenIndex] = useState<number | null>(0);
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   function toggle(index: number) {
     setOpenIndex((current) => (current === index ? null : index));
@@ -19,9 +19,9 @@ export default function Experience() {
         <div className="experience-hero">
           <h2 className="reveal">Experience</h2>
 
-          <p className="experience-lead reveal reveal-delay-1">
+          {/* <p className="experience-lead reveal reveal-delay-1">
             The experience that shapes how I deliver reliable products.
-          </p>
+          </p> */}
         </div>
 
         <div className="experience-list">
