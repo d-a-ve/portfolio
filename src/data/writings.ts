@@ -13,19 +13,19 @@ export type Writing = {
 };
 
 export const writings: Writing[] = [
-	{
-		slug: "async-state-without-flags",
-		title: "Async state without a pile of boolean flags",
-		excerpt:
-			"idle, loading, error, success — one status field beats isLoading + isError + isSuccess spaghetti.",
-		date: "2026-02-04",
-		readingTime: "6 min",
-		tags: ["react", "typescript", "patterns"],
-		cover:
-			"https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1600&q=80",
-		coverAlt: "Code on a dark editor screen",
-		markdown: asyncStateWithoutFlags,
-	},
+	// {
+	// 	slug: "async-state-without-flags",
+	// 	title: "Async state without a pile of boolean flags",
+	// 	excerpt:
+	// 		"idle, loading, error, success — one status field beats isLoading + isError + isSuccess spaghetti.",
+	// 	date: "2026-02-04",
+	// 	readingTime: "6 min",
+	// 	tags: ["react", "typescript", "patterns"],
+	// 	cover:
+	// 		"https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1600&q=80",
+	// 	coverAlt: "Code on a dark editor screen",
+	// 	markdown: asyncStateWithoutFlags,
+	// },
 ];
 
 export function getWriting(slug: string) {
