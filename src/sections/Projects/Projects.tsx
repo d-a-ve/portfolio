@@ -21,7 +21,7 @@ export default function Projects() {
   return (
     <section className="section projects" id="projects">
       <div className="projects-container grid">
-        <SectionIntro num="03">Selected projects</SectionIntro>
+        <SectionIntro num="02">Selected projects</SectionIntro>
 
         <div className="projects-hero">
           <h2 className="projects-title reveal">Projects</h2>

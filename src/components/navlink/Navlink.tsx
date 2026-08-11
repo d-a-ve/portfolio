@@ -1,4 +1,4 @@
-import React from "react";
+import { Link } from "@tanstack/react-router";
 import "./Navlink.css";
 
 export type LinkPropsType = {
@@ -9,11 +9,13 @@ export type LinkPropsType = {
 };
 
 export default function Navlink({ link, linkText, click }: LinkPropsType) {
+  const isHome = link === "home";
+
   return (
     <li className="nav-link">
-      <a href={`#${link}`} onClick={click}>
+      <Link to="/" hash={isHome ? undefined : link} onClick={click}>
         {linkText}
-      </a>
+      </Link>
     </li>
   );
 }

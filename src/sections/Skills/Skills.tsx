@@ -12,7 +12,7 @@ export default function Skills() {
   return (
     <section className="section" id="skills">
       <div className="skills-container grid">
-        <SectionIntro num="02">What I use to craft</SectionIntro>
+        <SectionIntro num="01">What I use to craft</SectionIntro>
 
         <div className="skills-hero">
           <h2 className="reveal">Skills</h2>

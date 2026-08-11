@@ -103,6 +103,8 @@ body::after {
 #root {
   position: relative;
   z-index: 2;
+  min-height: 100vh;
+  min-height: 100dvh;
 }
 
 body,

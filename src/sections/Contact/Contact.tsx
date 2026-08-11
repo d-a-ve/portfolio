@@ -4,8 +4,6 @@ import Socials from "../../components/Socials";
 import "./Contact.css";
 
 export default function Contact() {
-  const year = new Date().getFullYear();
-
   return (
     <section className="section contact" id="contact">
       <div className="contact-shell">
@@ -36,12 +34,6 @@ export default function Contact() {
               Usually responding within a day or two.
             </p>
           </div>
-        </div>
-
-        <div className="contact-footer">
-          <span>David Aronmwan</span>
-          <span>Software Engineer</span>
-          <span>&copy; {year}</span>
         </div>
       </div>
     </section>

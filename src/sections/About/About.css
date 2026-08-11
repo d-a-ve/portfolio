@@ -112,34 +112,6 @@
   margin-top: 1.4rem;
 }
 
-.socials {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.socials a {
-  display: inline-grid;
-  place-items: center;
-  width: 4.6rem;
-  height: 4.6rem;
-  border-radius: 999px;
-  border: 1px solid var(--line-strong);
-  color: var(--text);
-  transition:
-    border-color 200ms ease,
-    background 200ms ease,
-    color 200ms ease,
-    transform 200ms ease;
-}
-
-.socials a:hover {
-  transform: translateY(-2px);
-  border-color: var(--accent);
-  background: var(--accent);
-  color: var(--accent-ink);
-}
-
 @media (max-width: 900px) {
   .about-grid {
     grid-template-columns: 1fr;

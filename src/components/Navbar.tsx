@@ -1,3 +1,4 @@
+import { Link } from "@tanstack/react-router";
 import Navlink from "./navlink/Navlink";
 import Button, { RESUME_URL } from "../utils/Button";
 import { AiOutlineClose } from "react-icons/ai";
@@ -35,11 +36,12 @@ export default function Navbar({
       ) : null}
       <ul className="nav-links">
         <Navlink link="home" linkText="Home" click={closeNav} />
-        <Navlink link="about" linkText="About" click={closeNav} />
-        <Navlink link="skills" linkText="Skills" click={closeNav} />
         <Navlink link="projects" linkText="Projects" click={closeNav} />
-        <Navlink link="experience" linkText="Experience" click={closeNav} />
-        <Navlink link="contact" linkText="Contact" click={closeNav} />
+        <li className="nav-link">
+          <Link to="/writings" onClick={closeNav}>
+            Writings
+          </Link>
+        </li>
       </ul>
 
       {isOverlay ? (
