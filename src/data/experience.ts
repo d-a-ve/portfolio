@@ -8,6 +8,19 @@ export type ExperienceEntry = {
 
 export const experience: ExperienceEntry[] = [
   {
+    duration: "Feb 2026 - Sept 2026",
+    title: "Frontend Developer",
+    type: "Remote",
+    company: "Calc Bridge",
+    highlights: [
+      "Cut CLO calculation time from about 40 hours a week to about 30 minutes by shipping compliance runs, reconciliation, and what-if scenario workflows on a multi-tenant Next.js platform",
+      "Built virtualized Excel-like workbook grids with cell editing, range selection, column resize, clipboard TSV paste, and infinite row loading for large portfolio datasets",
+      "Orchestrated a 7-step compliance run wizard covering suite selection, column mapping, data quality, eligibility, thresholds, and schedule creation",
+      "Synced long-running workbook upload and screening workflows in the background over WebSockets with live progress feedback",
+      "Enforced fine-grained UI permissions so each surface and action only appeared for roles that were allowed to use them",
+    ],
+  },
+  {
     duration: "Jan 2024 - Jan 2026",
     title: "Fullstack Developer",
     company: "Holidayalot",
