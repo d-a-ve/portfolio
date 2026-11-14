@@ -3,8 +3,7 @@ import "./Button.css";
 
 // I want to avoid putting my email directly in the DOM to prevent bot spams, so using a click event to add it when it is clicked
 
-export const RESUME_URL =
-  "https://drive.google.com/file/d/1F1k1PPrdWH0m3TzXTSOtOSJWdoq9uUJs/view?usp=drive_link";
+export const RESUME_URL = import.meta.env.VITE_RESUME_URL;
 
 export function directToEmail(
   e: React.MouseEvent<HTMLAnchorElement>,
