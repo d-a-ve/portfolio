@@ -27,13 +27,13 @@ export const projects: ProjectEntry[] = [
     technologiesUsed: "Next.js, React, Typescript, TailwindCSS, Redux, RTK query, Tanstack query",
   },
   {
-    title: "Zkyte Courses",
+    title: "zKyte Course Platform",
     description:
-      "A course platform for users to learn new tech skills and get certified.",
+      "Edutech course platform with external pages, user dashboard, and admin dashboard.",
     link: "https://courses.zkyte.com/",
     githubRepoLink: undefined,
     projectCover: "zkyte-courses",
-    technologiesUsed: "Next.js, React, Typescript, TailwindCSS, Zustand, Tanstack Query",
+    technologiesUsed: "React, Axios, TanStack Query, GCP, Firebase",
   },
   {
     title: "Zkyte Ltd",
